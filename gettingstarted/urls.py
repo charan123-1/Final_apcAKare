@@ -3,8 +3,9 @@ from django.urls import path, include
 from django.contrib import admin
 
 admin.autodiscover()
-
+from django.conf.urls.static import static
 import hello.views
+from django.conf import settings
 
 # To add a new path, first import the app:
 # import blog
@@ -19,3 +20,4 @@ urlpatterns = [
     path("guntur/", hello.views.guntur, name="guntur"),
     path("admin/", admin.site.urls),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

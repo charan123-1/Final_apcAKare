@@ -14,7 +14,11 @@ import os
 import django_heroku
 
 
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.conf import settings
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -42,7 +46,7 @@ INSTALLED_APPS = [
     "hello",
     'rest_framework',
     'corsheaders',
-    'import_export'
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -118,5 +122,11 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
+
+MEDIA_URL = '/media/tata.png/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+
 
 django_heroku.settings(locals())
