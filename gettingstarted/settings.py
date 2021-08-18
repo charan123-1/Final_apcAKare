@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 
-MEDIA_URL = '/media/tata.png/'
+MEDIA_URL = '/media/favicon.ico/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
