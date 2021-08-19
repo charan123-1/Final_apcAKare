@@ -1,8 +1,35 @@
-	<head>
+{% load static %}
+<head>
+        <link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>
     <title>guntur</title>
     <center>
     <h1>Guntur</h1>
 
+    <style>
+        body{
+            background-color : blue;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.pixabay.com/photo/2021/08/18/12/04/12-04-39-785_960_720.jpg');
+            background-repeat : no-repeat;
+            background-attachment : fixed;
+            background-size :cover;
+            background-position : center;
+        }
+        .table,th,td{
+            background-color : transparent;
+            border: .5px solid black;
+            border-collapse : collapse;
+             padding-left : 35px;
+        }
+        .table{
+            width :50%;
+        }
+        th{
+            height :20vh;
+
+        }
+
+
+    </style>
 
 
 
@@ -13,45 +40,34 @@
         <div class="col-md-12">
             <h2 class="text-center">Today's update</h2>
             <h4 class="text-center"><em>Total: {{guntur|length}}</em></h4>
-            <table class="table table-bordered table-striped table-hover">
+            <h5>Data maybe delayed sometimes</h5>
+            <table class="table table-bordered table-striped table-hover" id="table">
                 <thead class="thead-dark">
                     <tr>
 
-                        <th>number</th>
-                        <th>user id</th>
-                        <th>n1</th>
-                        <th>n2</th>
-                        <th>n3</th>
-                        <th>n4</th>
-                        <th>n5</th>
-                        <th>n6</th>
-                        <th>n7</th>
-                        <th>n8</th>
-                        <th>n9</th>
-                        <th>n10</th>
-                        <th>n11</th>
-                        <th>n12</th>
-                        <th>n13</th>
+                        <th>S.No</th>
+                        <th>Hospital Name</th>
+                        <th>Help Desk Number</th>
+                        <th>Nodal Officer Number</th>
+                        <th>Aarogyasri empanelment status</th>
+                        <th>ICU Available</th>
+                        <th>O2 General Beds Available</th>
+                        <th>General Beds Available</th>
+                        <th>Ventilators Available</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for m in guntur %}
                         <tr>
-                            <td>{{m.num}}</td>
-                            <td>{{m.userid}}</td>
-                            <td>{{m.n1}}</td>
-                            <td>{{m.n2}}</td>
-                            <td>{{m.n3}}</td>
-                            <td>{{m.n4}}</td>
-							<td>{{m.n5}}</td>
-							<td>{{m.n6}}</td>
-							<td>{{m.n7}}</td>
-							<td>{{mg.n8}}</td>
-							<td>{{m.n9}}</td>
-							<td>{{m.n10}}</td>
-							<td>{{m.n11}}</td>
-                            <td>{{m.n12}}</td>
-                            <td>{{m.n13}}</td>
+                            <td>{{m.SNO}}</td>
+                            <td>{{m.Hospital}}</td>
+                            <td>{{m.HelpDeskNumber}}</td>
+                            <td>{{m.NodalOfficerNumber}}</td>
+                            <td>{{m.AarogyasriEmpanelmentstatus}}</td>
+                            <td>{{m.ICUAvailable}}</td>
+							<td>{{m.O2Available}}</td>
+							<td>{{m.GeneralAvailable}}</td>
+							<td>{{m.VentilatorAvailable}}</td>
                         </tr>
                     {% endfor %}
                 </tbody>

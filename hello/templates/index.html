@@ -3,7 +3,7 @@
 {% load static %}
 
 <head>
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
     <style>
@@ -33,21 +33,25 @@
         }
 
         .pic {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.pixabay.com/photo/2021/08/18/12/04/12-04-39-785_960_720.jpg');
-            background-size: cover;
-            background-attachment: fixed;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('static/doctor.jpeg');
+
             height : 95vh;
             padding-left :480px;
             padding-top : 70px;
+            background-repeat : no-repeat;
+            background-size : cover;
+            filter : brightness(120%);
         }
         .pic1{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('static/charan-1edit.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('static/luv_animated.jpeg');
             background-size: cover;
-            background-attachment: fixed;
+
             height : 95vh;
             padding-left :480px;
             padding-top : 70px;
+
         }
+
 
         .navbar {
             height: 12%;
@@ -78,6 +82,22 @@
             width: 50px;
             cursor: pointer;
         }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
 
         nav {
             flex: 1;
@@ -118,8 +138,52 @@
 
 
         }
+        nav{
+    float: left;
+    margin: 0;
+    overflow:hidden;
+    text-align: center;
+}
 
-        .button {
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav > ul > li > a{
+    color: #aaa;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+.logo-img{
+    float: left;
+    position: relative;
+    margin: 10px 10px 15px 10px;
+    border-radius : 55%;
+}
+.bg-div{
+   background: #5cbfde;
+   overflow: hidden;
+}
+#p1{
+    background: peachpuff;
+		color: black;
+		border:3px solid black;
+		padding: 13px 13px 13px 20px;
+		position : relative;
+		right : 460px;
+		top:20px;
+
+}
+     .button {
             box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee, 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
         }
 
@@ -134,22 +198,21 @@
          }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
 </head>
-<div class="container">
-    <!-- <div class = "navbar">
-            <img src ="#" class ="logo">
-            <div class ="elementsContainer">
-                <input type="text" name="" placeholder="search" class="search">
-            </div>
-            <nav>
-                <ul>
-                        <li><a href="HospitalDetailsEntry.html">HOME</a></li>
-                        <li><a href="patient loginpage.html">PATIENT</a></li>
-                        <li><a href="hospitelloginandregisterpage.html">HOSPITAL</a></li>
-                </ul>
-            </nav>
-        </div>-->
+
+<div class="bg-div">
+    <a href="/"><img   class="logo-img" src="static/logo.jpeg" width="130" height="130" ALT="align box" ALIGN=CENTER></a>
+    <nav>
+        <ul>
+
+            <!--<li><a href="https://instagram.com/apcakare?utm_medium=copy_link">Instagram</a></li>
+            <li><a href="https://www.apcakare@gmail.com">Gmail</a></li>-->
+        </ul>
+    </nav>
 </div>
+
+
 <div class="pic">
 
 
@@ -194,58 +257,39 @@
     </a>
 </div>
 <div class="pic1">
-    <p>vdxvxf
-        He sat staring at the person in the train stopped at the station going in the opposite direction. She sat
-        staring ahead, never noticing that she was being watched. Both trains began to move and he knew that in another
-        timeline or in another universe, they had been happy together.
-        What was beyond the bend in the stream was unknown. Both were curious, but only one was brave enough to want to
-        explore. That was the problem. There was always one that let fear rule her life.
-        She tried not to judge him. His ratty clothes and unkempt hair made him look homeless. Was he really the next
-        Einstein as she had been told? On the off chance it was true, she continued to try not to judge him.
-        Debbie put her hand into the hole, sliding her hand down as far as her arm could reach. She wiggled her fingers
-        hoping to touch something, but all she felt was air. She shifted the weight of her body to try and reach an inch
-        or two more down the hole. Her fingers still touched nothing but air.
-        The cab arrived late. The inside was in as bad of shape as the outside which was concerning, and it didn't
-        appear that it had been cleaned in months. The green tree air-freshener hanging from the rearview mirror was
-        either exhausted of its scent or not strong enough to overcome the other odors emitting from the cab. The
-        correct decision, in this case, was to get the hell out of it and to call another cab, but she was late and
-        didn't have a choice.
-        He heard the loud impact before he ever saw the result. It had been so loud that it had actually made him jump
-        back in his seat. As soon as he recovered from the surprise, he saw the crack in the windshield. It seemed to be
-        an analogy of the current condition of his life.
-        The words hadn't flowed from his fingers for the past few weeks. He never imagined he'd find himself with
-        writer's block, but here he sat with a blank screen in front of him. That blank screen taunting him day after
-        day had started to play with his mind. He didn't understand why he couldn't even type a single word, just one to
-        begin the process and build from there. And yet, he already knew that the eight hours he was prepared to sit in
-        front of his computer today would end with the screen remaining blankHe sat staring at the person in the train
-        stopped at the station going in the opposite direction. She sat staring ahead, never noticing that she was being
-        watched. Both trains began to move and he knew that in another timeline or in another universe, they had been
-        happy together.
-        What was beyond the bend in the stream was unknown. Both were curious, but only one was brave enough to want to
-        explore. That was the problem. There was always one that let fear rule her life.
-        She tried not to judge him. His ratty clothes and unkempt hair made him look homeless. Was he really the next
-        Einstein as she had been told? On the off chance it was true, she continued to try not to judge him.
-        Debbie put her hand into the hole, sliding her hand down as far as her arm could reach. She wiggled her fingers
-        hoping to touch something, but all she felt was air. She shifted the weight of her body to try and reach an inch
-        or two more down the hole. Her fingers still touched nothing but air.
-        The cab arrived late. The inside was in as bad of shape as the outside which was concerning, and it didn't
-        appear that it had been cleaned in months. The green tree air-freshener hanging from the rearview mirror was
-        either exhausted of its scent or not strong enough to overcome the other odors emitting from the cab. The
-        correct decision, in this case, was to get the hell out of it and to call another cab, but she was late and
-        didn't have a choice.
-        He heard the loud impact before he ever saw the result. It had been so loud that it had actually made him jump
-        back in his seat. As soon as he recovered from the surprise, he saw the crack in the windshield. It seemed to be
-        an analogy of the current condition of his life.
-        The words hadn't flowed from his fingers for the past few weeks. He never imagined he'd find himself with
-        writer's block, but here he sat with a blank screen in front of him. That blank screen taunting him day after
-        day had started to play with his mind. He didn't understand why he couldn't even type a single word, just one to
-        begin the process and build from there. And yet, he already knew that the eight hours he was prepared to sit in
-        front of his computer today would end with the screen remaining blank.He sat staring at the person in the train
-        stopped at the station going in the opposite direction. She sat staring ahead, never noticing that she was being
-        watched. Both trains began to move and he knew that in another timeline or in another universe, they had been
-        happy together.
-        Wha.</p>
+    <p id="p1">
+    20/08/2021<br>
+<br>
+❇️ * #COVID19 new cases reported in the last 24 hours: 36,401; Active caseload stands at 3,64,129 *<br>
+❇️ * Over 50 crore total COVID tests conducted so far *<br>
+❇️ * Total Recoveries cross 3.15 crore mark; Recovery Rate increases to 97.53% *<br>
+❇️ * #FactCheck: Vaccines can be taken at any time during the course of pregnancy *<br>
+❇️ * PM Modi to share his thoughts with the citizens through 'Mann Ki Baat' programme on 29th August *<br>
+❇️ *08 Jul, 2021, 06.47 PM IST, Amid Krishna river row, AP CM seeks to decry politics over water, stresses need for cordial ties between states<br>
 
+
+
+    </p><br><br>
+<b><p id="p2">
+
+    <b><h3> కరోనావైరస్వ్యాధిలక్షణాలుసాధారణంగావ్యాధితీవ్రతనుబట్టిపెరుగుతూఉంటాయి . వ్యాధిలక్షణాలు :<br></h3></b>
+1.జలుబు<br>
+
+2.జ్వరం<br>
+
+3.దగ్గు<br>
+
+4.తలనొప్పి<br>
+
+5.అలసటగా ఉండటం<br>
+    <br><br>
+    <b><h3>కరోనావైరస్వ్యాపించకుండాతీసుకోవలసినజాగ్రత్తలు :</h3></b><br>
+    👉ఒక వ్యక్తి నుండి మరొక వ్యక్తికి ఏ వ్యాధి సంక్రమిస్తుంది, కనుక వీలైనంత దూరం పాటించడం శ్రేయస్కరం.<br>
+    👉కరోనా వైరస్ సంక్రమించిన వ్యక్తి తుమ్మినప్పుడు, దగ్గినప్పుడు, ఆ తుంపర్ల ద్వారా వైరస్ సంక్రమిస్తుంది. – కనుక తుమ్మినప్పుడు , దగ్గినప్పుడు చేతిరుమాలు లేదా నాప్కిన్ అడ్డుపెట్టుకోవడం ద్వారా ఏ వ్యాధి సంక్రమణను అరికట్టవచ్చు.<br>
+    👉వైరస్ ఉన్న వ్యక్తి నోటినుండి వచ్చిన తుంపరలు ఏదైనా వస్తువుపై పడిన , ఆ వస్తువుని ఆరోగ్యమైన వ్యక్తి తాకడం ద్వారకుడా ఈ వ్యాధి సంక్రమిస్తుంది. – కనుక వీలైనంత వరకు ఏదైనా వస్తువుని తాకిన చేతులతో ముఖాన్ని, నోటిని మరియు ముక్కుని తాకడం వంటివి చేయకూడదు.<br>
+
+    </p>
+</b>
 </div>
 
 </html>

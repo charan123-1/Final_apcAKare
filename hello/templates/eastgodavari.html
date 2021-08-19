@@ -1,0 +1,77 @@
+{% load static %}
+<head>
+        <link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>
+    <title>East Godavari</title>
+    <center>
+    <h1>East Godavari</h1>
+    <style>
+        body{
+            background-color : blue;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.pixabay.com/photo/2021/08/18/12/04/12-04-39-785_960_720.jpg');
+            background-repeat : no-repeat;
+            background-attachment : fixed;
+            background-size :cover;
+            background-position : center;
+        }
+        .table,th,td{
+            background-color : transparent;
+            border: .5px solid black;
+            border-collapse : collapse;
+             padding-left : 35px;
+        }
+        .table{
+            width :50%;
+        }
+        th{
+            height :20vh;
+
+        }
+
+
+    </style>
+
+
+
+
+
+
+	<div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">Today's update</h2>
+            <h4 class="text-center"><em>Total: {{eastgodavari|length}}</em></h4>
+            <table class="table table-bordered table-striped table-hover" id="table">
+                <thead class="thead-dark">
+                    <tr>
+
+                        <th>S.No</th>
+                        <th>Hospital Name</th>
+                        <th>Help Desk Number</th>
+                        <th>Nodal Officer Number</th>
+                        <th>Aarogyasri empanelment status</th>
+                        <th>ICU Available</th>
+                        <th>O2 General Beds Available</th>
+                        <th>General Beds Available</th>
+                        <th>Ventilators Available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for m in eastgodavari %}
+                        <tr>
+                            <td>{{m.SNO}}</td>
+                            <td>{{m.Hospital}}</td>
+                            <td>{{m.HelpDeskNumber}}</td>
+                            <td>{{m.NodalOfficerNumber}}</td>
+                            <td>{{m.AarogyasriEmpanelmentstatus}}</td>
+                            <td>{{m.ICUAvailable}}</td>
+							<td>{{m.O2Available}}</td>
+							<td>{{m.GeneralAvailable}}</td>
+							<td>{{m.VentilatorAvailable}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    </center>
+    </head>

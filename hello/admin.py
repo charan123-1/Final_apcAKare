@@ -15,6 +15,7 @@ class excelSheet(ImportExportModelAdmin):
 class excelSheet(ImportExportModelAdmin):
     pass
 
+
 @admin.register(WG)
 class excelSheet(ImportExportModelAdmin):
     pass

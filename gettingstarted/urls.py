@@ -18,6 +18,7 @@ from django.conf import settings
 urlpatterns = [
     path("", hello.views.home, name="home"),
     path("admin/", admin.site.urls),
+
     path('anantapur/', hello.views.anantapur, name="anantapur"),
     path('guntur/', hello.views.guntur, name="guntur"),
     path('chittoor/', hello.views.chittoor, name="chittoor"),

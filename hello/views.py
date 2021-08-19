@@ -95,3 +95,6 @@ def nellore(request):
     nellore = Nellore.objects.all()
     return render(request, 'nellore.html',
         {'nellore': nellore})
+
+def contactus(request):
+    return render(request,'contactus.html',{})

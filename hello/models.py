@@ -2,290 +2,202 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.from django.db import models
 #
 # # Create your models here.
 class Guntur(models.Model):
-     district = models.CharField(default='',max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid  =  models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0,max_length=200)
-     n2 = models.CharField(default=0,max_length=200)
-     n3 = models.CharField(default=0,max_length=200)
-     n4 = models.CharField(default=0,max_length=200)
-     n5 = models.CharField(default=0,max_length=200)
-     n6 = models.CharField(default=0,max_length=200)
-     n7 = models.CharField(default=0,max_length=200)
-     n8 = models.CharField(default=0,max_length=200)
-     n9 = models.CharField(default=0,max_length=200)
-     n10 = models.CharField(default=0,max_length=200)
-     n11 = models.CharField(default=0,max_length=200)
-     n12 = models.CharField(default=0,max_length=200)
-     n13 = models.CharField(default=0,max_length=200)
+     SNO = models.CharField(default='',max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber  =  models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0,max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0,max_length=200)
+     ICUAvailable = models.CharField(default=0,max_length=200)
+     O2Available = models.CharField(default=0,max_length=200)
+     GeneralAvailable = models.CharField(default=0,max_length=200)
+     VentilatorAvailable= models.CharField(default=0,max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 class EG(models.Model):
-     district = models.CharField(default='',max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid  =  models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0,max_length=200)
-     n2 = models.CharField(default=0,max_length=200)
-     n3 = models.CharField(default=0,max_length=200)
-     n4 = models.CharField(default=0,max_length=200)
-     n5 = models.CharField(default=0,max_length=200)
-     n6 = models.CharField(default=0,max_length=200)
-     n7 = models.CharField(default=0,max_length=200)
-     n8 = models.CharField(default=0,max_length=200)
-     n9 = models.CharField(default=0,max_length=200)
-     n10 = models.CharField(default=0,max_length=200)
-     n11 = models.CharField(default=0,max_length=200)
-     n12 = models.CharField(default=0,max_length=200)
-     n13 = models.CharField(default=0,max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class WG(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Krishna(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Prakasam(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Nellore(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Chittoor(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Visakha(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Vizianagaram(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Srikakulam(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Kadapa(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Kurnool(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
 
 
 class Ananthapur(models.Model):
-     district = models.CharField(default='', max_length=100)
-     num = models.CharField(default=0, max_length=200)
-     userid = models.CharField(max_length=30, default='')
-     n1 = models.CharField(default=0, max_length=200)
-     n2 = models.CharField(default=0, max_length=200)
-     n3 = models.CharField(default=0, max_length=200)
-     n4 = models.CharField(default=0, max_length=200)
-     n5 = models.CharField(default=0, max_length=200)
-     n6 = models.CharField(default=0, max_length=200)
-     n7 = models.CharField(default=0, max_length=200)
-     n8 = models.CharField(default=0, max_length=200)
-     n9 = models.CharField(default=0, max_length=200)
-     n10 = models.CharField(default=0, max_length=200)
-     n11 = models.CharField(default=0, max_length=200)
-     n12 = models.CharField(default=0, max_length=200)
-     n13 = models.CharField(default=0, max_length=200)
+     SNO = models.CharField(default='', max_length=100)
+     Hospital = models.CharField(default=0, max_length=200)
+     HelpDeskNumber = models.CharField(max_length=30, default='')
+     NodalOfficerNumber = models.CharField(default=0, max_length=200)
+     AarogyasriEmpanelmentstatus = models.CharField(default=0, max_length=200)
+     ICUAvailable = models.CharField(default=0, max_length=200)
+     O2Available = models.CharField(default=0, max_length=200)
+     GeneralAvailable = models.CharField(default=0, max_length=200)
+     VentilatorAvailable = models.CharField(default=0, max_length=200)
 
      def __str__(self):
-          return self.district
+          return self.Hospital
+
+
