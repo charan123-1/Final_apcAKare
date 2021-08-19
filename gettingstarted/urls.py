@@ -17,7 +17,17 @@ from django.conf import settings
 
 urlpatterns = [
     path("", hello.views.home, name="home"),
-    path("guntur/", hello.views.guntur, name="guntur"),
     path("admin/", admin.site.urls),
+    path('anantapur/', hello.views.anantapur, name="anantapur"),
+    path('guntur/', hello.views.guntur, name="guntur"),
+    path('chittoor/', hello.views.chittoor, name="chittoor"),
+    path('eastgodavari/', hello.views.eastgodavari, name="eastgodavari"),
+    path('kadapa/', hello.views.kadapa, name="kadapa"),
+    path('krishna/', hello.views.krishna, name="krishna"),
+    path('kurnool/', hello.views.kurnool, name="kurnool"),
+    path('prakasam/', hello.views.prakasam, name="prakasam"),
+    path('srikakulam/', hello.views.srikakulam, name="srikakulam"),
+    path('visakhapatnam/', hello.views.visakhapatnam, name="visakhapatnam"),
+    path('vizianagaram/', hello.views.vizianagaram, name="vizianagaram"),
+    path('westgodavari/', hello.views.westgodavari, name="westgodavari")
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

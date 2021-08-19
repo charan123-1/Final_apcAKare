@@ -93,7 +93,7 @@ class Krishna(models.Model):
           return self.district
 
 
-class Prakasham(models.Model):
+class Prakasam(models.Model):
      district = models.CharField(default='', max_length=100)
      num = models.CharField(default=0, max_length=200)
      userid = models.CharField(max_length=30, default='')
@@ -225,7 +225,7 @@ class Srikakulam(models.Model):
           return self.district
 
 
-class kadapa(models.Model):
+class Kadapa(models.Model):
      district = models.CharField(default='', max_length=100)
      num = models.CharField(default=0, max_length=200)
      userid = models.CharField(max_length=30, default='')

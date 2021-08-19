@@ -1,5 +1,4 @@
-<head>
-    <link rel="stylesheet" href="css.css">
+	<head>
     <title>guntur</title>
     <center>
     <h1>Guntur</h1>
@@ -36,23 +35,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for msg in guntur %}
+                    {% for m in guntur %}
                         <tr>
-                            <td>{{msg.num}}</td>
-                            <td>{{msg.userid}}</td>
-                            <td>{{msg.n1}}</td>
-                            <td>{{msg.n2}}</td>
-                            <td>{{msg.n3}}</td>
-                            <td>{{msg.n4}}</td>
-							<td>{{msg.n5}}</td>
-							<td>{{msg.n6}}</td>
-							<td>{{msg.n7}}</td>
-							<td>{{msg.n8}}</td>
-							<td>{{msg.n9}}</td>
-							<td>{{msg.n10}}</td>
-							<td>{{msg.n11}}</td>
-                            <td>{{msg.n12}}</td>
-                            <td>{{msg.n13}}</td>
+                            <td>{{m.num}}</td>
+                            <td>{{m.userid}}</td>
+                            <td>{{m.n1}}</td>
+                            <td>{{m.n2}}</td>
+                            <td>{{m.n3}}</td>
+                            <td>{{m.n4}}</td>
+							<td>{{m.n5}}</td>
+							<td>{{m.n6}}</td>
+							<td>{{m.n7}}</td>
+							<td>{{mg.n8}}</td>
+							<td>{{m.n9}}</td>
+							<td>{{m.n10}}</td>
+							<td>{{m.n11}}</td>
+                            <td>{{m.n12}}</td>
+                            <td>{{m.n13}}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
