@@ -24,6 +24,7 @@ urlpatterns = [
     path('eastgodavari/', hello.views.eastgodavari, name="eastgodavari"),
     path('kadapa/', hello.views.kadapa, name="kadapa"),
     path('krishna/', hello.views.krishna, name="krishna"),
+    path('nellore/', hello.views.nellore, name="nellore"),
     path('kurnool/', hello.views.kurnool, name="kurnool"),
     path('prakasam/', hello.views.prakasam, name="prakasam"),
     path('srikakulam/', hello.views.srikakulam, name="srikakulam"),
