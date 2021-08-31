@@ -1,306 +1,648 @@
-<!Doctype html>
-<html>
+{% extends "./base.html" %}
+{% block content %}
 {% load static %}
 
-<head>
-    <link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SR9X6NY4Z"></script>
+
+<head xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+	<meta charset="utf-8">
+	<title>apcakare</title>
+<link href="../static/css.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-  gtag('config', 'G-4SR9X6NY4Z');
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            flex-direction: row;
-        }
-        a:link {
-             text-decoration: none;
-           }
-        .btn{
-            margin-left :5% 70px;
-
-
-        }
-        .container {
-            height: 100%;
-            width: 100%;
-            color: bright;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            position: absolute;
-        }
-
-        .pic {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('static/doctor.jpeg');
-
-            height : 95vh;
-            padding-left :480px;
-            padding-top : 30px;
-            background-repeat : no-repeat;
-            background-size : cover;
-            filter : brightness(120%);
-        }
-        .pic1{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('static/luv_animated.jpeg');
-            background-size: cover;
-
-            height : 95vh;
-            padding-left :480px;
-            padding-top : 70px;
-
-        }
-
-
-        .navbar {
-            height: 12%;
-            display: flex;
-            align-items: center;
-            border-radius: 5px;
-            background: aliceblue;
-            border: 2px;
-            height: 17%;
-
-        }
-
-        .elementsContainer {
-            padding-left: 20%;
-        }
-
-        .search {
-            border: 2px;
-            height: 30px;
-            width: 500px;
-            text-align: center;
-            border-radius: 50px;
-            font-size: 16px;
-            background: #7395AE;
-        }
-
-        .logo {
-            width: 50px;
-            cursor: pointer;
-        }
-        ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
-}
-
-        nav {
-            flex: 1;
-            text-align: right;
-        }
-
-        nav ul li {
-            list-style: none;
-            display: inline-block;
-            margin-left: 45px;
-
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: darkgrey;
-            font-size: 13px;
-        }
-
-        button {
-            width: 180px;
-            margin: 5% 20px;
-            padding: 8px 0px;
-            text-align: center;
-            font-family: poppins;
-            font-size: 14px;
-            font-weight: 400;
-            color: black;
-            background-color: transparent;
-            position: relative;
-            border: 5px solid #000;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            border-radius: 100px;
-            transition: 5s;
-            border-spacing: 1px;
-
-
-        }
-        nav{
-    float: left;
-    margin: 0;
-    overflow:hidden;
-    text-align: center;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style-type: none;
-}
-
-nav > ul > li > a{
-    color: #aaa;
-    display: block;
-    line-height: 2em;
-    padding: 0.5em 1em;
-    text-decoration: none;
-}
-
-.logo-img{
-    float: left;
-    position: relative;
-    margin: 10px 10px 15px 10px;
-    border-radius : 55%;
-}
-.bg-div{
-   background: #5cbfde;
-   overflow: hidden;
-}
-#p1{
-    background: peachpuff;
-		color: black;
-		border:3px solid black;
-		padding: 13px 13px 13px 20px;
-		position : relative;
-		right : 460px;
-		top:20px;
-
-}
-     .button {
-            box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee, 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
-        }
-
-        @media only screen and (max-width: 600px) {
-         .pic
-         {
-            background-size: cover;
-            background-attachment: fixed;
-            height : 120vh;
-            padding-left :100px;
-            padding-top : 10px;
-         }
-
-
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
 </head>
 
-<div class="bg-div">
-    <a href="/"><img   class="logo-img" src="static/logo.jpeg" width="130" height="130" ALT="align box" ALIGN=CENTER></a>
-    <nav>
-        <ul>
+<style>
 
-            <!--<li><a href="https://instagram.com/apcakare?utm_medium=copy_link">Instagram</a></li>
-            <li><a href="https://www.apcakare@gmail.com">Gmail</a></li>-->
-        </ul>
-    </nav>
+
+  body {
+  margin: 0;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.padded {
+  padding: 100px 0;
+}
+.wrapper-grey {
+  background: #F4F4F4;
+}
+.avatar {
+  width: 30px;
+  border-radius: 50%;
+}
+.avatar-bordered {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+.avatar-large {
+  width: 50px;
+}
+/* .banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 50px;
+} */
+
+.card {
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 22px;
+}
+.card-description p {
+  font-size: 15px;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover{
+  opacity: 0.1;
+}
+.features img {
+  width: 100px;
+}
+.features h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.features p {
+  font-size: 15px;
+  font-weight: lighter;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-md-12">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/11.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/12.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
 </div>
 
-
-<div class="pic">
-
-
-    <a href='anantapur'>
-        <button class="btn" >Anantapur</button>
-    </a>
-    <a href='chittoor'>
-        <button class="btn">Chittoor</button>
-    </a>
-    <a href='eastgodavari'>
-        <button class="btn">east godavari</button>
-    </a>
-    <a href="guntur">
-        <button class="btn">guntur</button>
-    </a>
-    <a href='kadapa'>
-        <button class="btn">kadapa</button>
-    </a>
-    <a href='krishna'>
-        <button class="btn">krishna</button>
-    </a>
-    <a href='kurnool'>
-        <button class="btn">kurnool</button>
-    </a>
-    <a href='nellore'>
-        <button class="btn">nellore</button>
-    </a>
-    <a href='prakasam'>
-        <button class="btn">prakasam</button>
-    </a>
-    <a href='srikakulam'>
-        <button class="btn">srikakulam</button>
-    </a>
-    <a href='visakhapatnam'>
-        <button class="btn">visakhapatnam</button>
-    </a>
-    <a href='vizianagaram'>
-        <button class="btn">vizianagaram</button>
-    </a>
-    <a href='westgodavari'>
-        <button class="btn">west godavari</button>
-    </a>
+<!--<div class="row">
+<div class="col-md-4"> 
+<div class="card" >
+ <a href="/anantapur"><img src="../static/districts/anantapur.jpeg" class="card-img-top" alt="" ></a>
+  <div class="card-body">
+    <a href="/anantapur"><h3 class="text-center text-primary" >ANANTAPUR</h3></a>
+  </div>
 </div>
-<div class="pic1">
-    <p id="p1">
-    20/08/2021<br>
-<br>
-❇️ * #COVID19 new cases reported in the last 24 hours: 36,401; Active caseload stands at 3,64,129 *<br>
-❇️ * Over 50 crore total COVID tests conducted so far *<br>
-❇️ * Total Recoveries cross 3.15 crore mark; Recovery Rate increases to 97.53% *<br>
-❇️ * #FactCheck: Vaccines can be taken at any time during the course of pregnancy *<br>
-❇️ * PM Modi to share his thoughts with the citizens through 'Mann Ki Baat' programme on 29th August *<br>
-❇️ *08 Jul, 2021, 06.47 PM IST, Amid Krishna river row, AP CM seeks to decry politics over water, stresses need for cordial ties between states<br>
+</div>
+<div class="col-md-4">
+<div class="card" >
+  <img src="../static/districts/chittoor.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/chittoor"><h3 class="text-center text-primary"> CHITTOOR </h3></a>
 
+  </div>
+</div>
+ </div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/eastgodavari.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+  <a href="/eastgodavari"><h3 class="text-center text-primary">EAST GODAVARI</h3></a>
 
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/guntur.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+  <a href="guntur"><h3 class="text-center text-primary">GUNTUR</h3></a>
 
-    </p><br><br>
-<b><p id="p2">
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/krishna.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/krishna"><h3 class="text-center text-primary">KRISHNA</h3></a>
 
-    <b><h3> కరోనావైరస్వ్యాధిలక్షణాలుసాధారణంగావ్యాధితీవ్రతనుబట్టిపెరుగుతూఉంటాయి . వ్యాధిలక్షణాలు :<br></h3></b>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card" >
+  <img src="../static/districts/kadapa.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/kadapa"><h3 class="text-center text-primary">KADAPA</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/kurnool.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/kurnool"><h3 class="text-center text-primary">KURNOOL</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/nellore.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/nellore"><h3 class="text-center text-primary">NELLORE</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/prakasam.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/prakasam"><h3 class="text-center text-primary">PRAKASAM</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/srikakulam.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/srikakulam"><h3 class="text-center text-primary">SRIKAKULAM</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/vizag.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/visakhapatnam"><h3 class="text-center text-primary">VISAKHAPATNAM</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/vizianagaram.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/vizianagaram"><h3 class="text-center text-primary">VIZIANAGARAM</h3></a>
+
+  </div>
+</div>
+</div>
+<div class="col-md-4"> 
+<div class="card" >
+  <img src="../static/districts/westgodavari.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <a href="/westgodavari"><h3 class="text-center text-primary">WEST GODAVARI</h3></a>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row mt-5 mb-3">
+<div class="col-md-12"> 
+<h2 class="left text-primary"> Symptoms </h2>
+<p class="leftr"> 
+కరోనా వైరస్ వ్యాధి లక్షణాలు సాధారణంగా వ్యాధి తీవ్రతనుబట్టి పెరుగుతూ ఉంటాయి వ్యాధిలక్షణాలు :<br>
 1.జలుబు<br>
-
 2.జ్వరం<br>
-
 3.దగ్గు<br>
-
 4.తలనొప్పి<br>
-
 5.అలసటగా ఉండటం<br>
-    <br><br>
-    <b><h3>కరోనావైరస్వ్యాపించకుండాతీసుకోవలసినజాగ్రత్తలు :</h3></b><br>
-    👉ఒక వ్యక్తి నుండి మరొక వ్యక్తికి ఏ వ్యాధి సంక్రమిస్తుంది, కనుక వీలైనంత దూరం పాటించడం శ్రేయస్కరం.<br>
-    👉కరోనా వైరస్ సంక్రమించిన వ్యక్తి తుమ్మినప్పుడు, దగ్గినప్పుడు, ఆ తుంపర్ల ద్వారా వైరస్ సంక్రమిస్తుంది. – కనుక తుమ్మినప్పుడు , దగ్గినప్పుడు చేతిరుమాలు లేదా నాప్కిన్ అడ్డుపెట్టుకోవడం ద్వారా ఏ వ్యాధి సంక్రమణను అరికట్టవచ్చు.<br>
-    👉వైరస్ ఉన్న వ్యక్తి నోటినుండి వచ్చిన తుంపరలు ఏదైనా వస్తువుపై పడిన , ఆ వస్తువుని ఆరోగ్యమైన వ్యక్తి తాకడం ద్వారకుడా ఈ వ్యాధి సంక్రమిస్తుంది. – కనుక వీలైనంత వరకు ఏదైనా వస్తువుని తాకిన చేతులతో ముఖాన్ని, నోటిని మరియు ముక్కుని తాకడం వంటివి చేయకూడదు.<br>
-
-    </p>
-</b>
+</p>
+</p>
+</div>
 </div>
 
-</html>
+<div class="container">
+<div class="row--mt-5 mb-3">
+<div class="col-md-12"> 
+<h2 class="text-end text-primary"> NEWS </h2>
+<p class="text-end">
+ <h3 >Useful Updates </h3>
+❇️ Cumulative vaccine doses given: 58.14 crore<br>
+
+🔸Vaccine given in last 24 Hrs: 52.23 lakhs<br>
+
+❇️ India reports 30,948 COVID cases in the last 24 hrs.<br>
+
+❇️ Daily case positivity currently at 1.95%.<br>
+
+❇️ 38,487 patients recovered in the last 24 Hrs from COVID-19; recovery rate increases to 97.57%.<br>
+
+❇️ Total COVID testing done: 50.62 crore<br>
+
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer>
+<div class="row bg-dark text-light">
+<div class="col-md-12"> 
+<h3><p> class="text-center">Copy Right @2021</h3>
+</footer>
+</body>
+
+<div class="row">
+  the cols in this div change the number of cards per row depending on screen size and the mb-4 adds space below cards if they spill over into the next row
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+  <a href="/guntur">  <div class="card">
+      <img class="card-img-top" src="../static/districts/guntur.jpeg" alt="Card image cap">
+      <div class="card-body">
+         <a href="/guntur" class="btn btn-primary">GUNTUR</a>     </div>
+    </div></a>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/srikakulam"><div class="card">
+      <img class="card-img-top" src="../static/districts/srikakulam.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+          <a href="/srikakulam" class="btn btn-primary">SRIKAKULAM</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/vizianagaram"><div class="card">
+      <img class="card-img-top" src="../static/districts/vizianagaram.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+        <a href="/vizianagaram" class="btn btn-primary">VIZIANAGARAM</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/chittoor"><div class="card">
+      <img class="card-img-top" src="../static/districts/chittoor.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+        <a href="/chittoor" class="btn btn-primary">CHITTOOR</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/nellore"><div class="card">
+      <img class="card-img-top" src="../static/districts/nellore.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+<a href="/nellore" class="btn btn-primary">NELLORE</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/krishna"><div class="card">
+      <img class="card-img-top" src="../static/districts/krishna.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+<a href="/krishna" class="btn btn-primary">KRISHNA</a>      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/kurnool"><div class="card">
+      <img class="card-img-top" src="../static/districts/kurnool.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+<a href="/kurnool" class="btn btn-primary">KURNOOL</a>      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/anantapur"><div class="card">
+      <img class="card-img-top" src="../static/districts/anantapur.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+        <a href="/anantapur" class="btn btn-primary">ANANTAPUR</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+   <a href="/visakhapatnam" ><div class="card">
+      <img class="card-img-top" src="../static/districts/vizag.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+          <a href="/visakhapatnam" class="btn btn-primary">VISAKHAPATNAM</a>
+
+      </div>
+   </div></a>
+  </div>
+   <div class="col-12 col-md-6 col-lg-4 mb-4" >
+    <a href="/eastgodavari" ><div class="card">
+      <img class="card-img-top" src="../static/districts/eastgodavari.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+          <a href="/eastgodavari" class="btn btn-primary">EAST GODAVARI</a>
+      </div>
+    </div></a>
+  </div>
+   <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/westgodavari" ><div class="card">
+      <img class="card-img-top" src="../static/districts/westgodavari.jpeg" alt="Card image cap">
+      <div class="card-body">
+
+          <a href="/westgodavari" class="btn btn-primary">WEST GODAVARI</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/prakasam" ><div class="card">
+      <img class="card-img-top" src="../static/districts/prakasham.jpg" alt="Card image cap" >
+      <div class="card-body">
+
+        <a href="/prakasam" class="btn btn-primary">PRAKASAM</a>
+      </div>
+    </div></a>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <a href="/kadapa"><div class="card">
+      <img class="card-img-top" src="../static/districts/kadapa.jpeg" alt="Card image cap">
+      <div class="card-body">
+         <a href="/kadapa" class="btn btn-primary">KADAPA</a>     </div>
+    </div></a>
+  </div>
+</div>-->
+
+
+
+
+
+  <body>
+
+
+    <div class="wrapper-grey padded">
+      <div class="container">
+        <h2 class="text-center">Districts</h2>
+         <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/anantapur.jpeg');">
+
+              <div class="card-description">
+                <h2>ANANTAPUR</h2>
+
+              </div>
+              <a class="card-link" href="/anantapur" ></a>
+            </div>
+         </div>
+
+           <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/chittoor.jpeg');">
+
+              <div class="card-description">
+                <h2>CHITTOOR</h2>
+
+              </div>
+              <a class="card-link" href="/chittoor" ></a>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/eastgodavari.jpeg');">
+
+              <div class="card-description">
+                <h2>EAST GODAVARI</h2>
+
+              </div>
+              <a class="card-link" href="/eastgodavari" ></a>
+            </div>
+          </div>
+            <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/guntur.jpeg');">
+
+              <div class="card-description">
+                <h2>GUNTUR</h2>
+
+              </div>
+              <a class="card-link" href="/guntur" ></a>
+            </div>
+            </div>
+              <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/kadapa.jpeg');">
+
+              <div class="card-description">
+                <h2>KADAPA</h2>
+
+              </div>
+              <a class="card-link" href="/kadapa" ></a>
+            </div>
+          </div>
+                  <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/krishna.jpeg');">
+
+              <div class="card-description">
+                <h2>KRISHNA</h2>
+
+              </div>
+              <a class="card-link" href="/krishna" ></a>
+            </div>
+          </div>
+
+               <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/kurnool.jpeg');">
+
+              <div class="card-description">
+                <h2>KURNOOL</h2>
+
+              </div>
+              <a class="card-link" href="/kurnool" ></a>
+            </div>
+          </div>
+
+              <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/nellore.jpeg');">
+
+              <div class="card-description">
+                <h2>NELLORE</h2>
+
+              </div>
+              <a class="card-link" href="/nellore" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/prakasham.jpg');">
+
+              <div class="card-description">
+                <h2>PRAKASAM</h2>
+
+              </div>
+              <a class="card-link" href="/prakasam" ></a>
+            </div>
+          </div>
+
+              <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/srikakulam.jpeg');">
+
+              <div class="card-description">
+                <h2>SRIKAKULAM</h2>
+
+              </div>
+              <a class="card-link" href="/srikakulam" ></a>
+            </div>
+          </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/vizag.jpeg');">
+
+              <div class="card-description">
+                <h2>VISAKHAPATNAM</h2>
+
+              </div>
+              <a class="card-link" href="/visakhapatnam" ></a>
+            </div>
+          </div>
+
+
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/vizianagaram.jpeg');">
+
+              <div class="card-description">
+                <h2>VIZIANAGARAM</h2>
+
+              </div>
+              <a class="card-link" href="/vizianagaram" ></a>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('../static/districts/westgodavari.jpeg');">
+
+              <div class="card-description">
+                <h2>WEST GODAVARI</h2>
+
+              </div>
+              <a class="card-link" href="/westgodavari" ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </body>   </div>
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

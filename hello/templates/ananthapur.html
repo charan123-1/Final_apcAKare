@@ -1,3 +1,6 @@
+{% extends "./base.html" %}
+{% block content %}
+
 {% load static %}
 <head>
         <!--<link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>-->
@@ -77,14 +80,4 @@
     </center>
     </head>
 
-<div class="bg-div">
-    <a href="/"><img   class="logo-img" src="static/logo.jpeg" width="130" height="130" ALT="align box" ALIGN=CENTER></a>
-    <nav>
-        <ul>
-
-            <!--<li><a href="https://instagram.com/apcakare?utm_medium=copy_link">Instagram</a></li>
-            <li><a href="https://www.apcakare@gmail.com">Gmail</a></li>-->
-        </ul>
-    </nav>
-</div>
-
+{% endblock %}
