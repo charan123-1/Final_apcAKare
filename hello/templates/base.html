@@ -1,5 +1,11 @@
 
  <head>
+     <style>
+    .navbar-custom {
+    background-color: #123C69;
+
+    }
+     </style>
     <meta charset="utf-8">
     <link href="../static/css.css" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
@@ -20,10 +26,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-12">
-	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-md fixed-top navbar-white  navbar-custom bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">apcakare</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NICK">
@@ -32,15 +39,10 @@
     <div class="collapse navbar-collapse" id="NICK">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/" target="blank">HOME</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/" target="blank">FACTS</a>
         </li>
         <li class ="nav-item">
-          <a class="nav-link" href="/contactus" target="blank">Contact us</a>
-        </li><li class ="nav-item">
-          <a class="nav-link" href="/contactus" target="blank">Contact us</a>
+          <a class="nav-link" href="/contactus" target="blank">CONTACT US</a>
         </li>
 
         <!--<li class="nav-item dropdown">
@@ -58,5 +60,6 @@
 </div>
 </div>
 </div>
+
 {% block content %}
 {% endblock %}
