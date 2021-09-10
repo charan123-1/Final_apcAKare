@@ -1,14 +1,17 @@
+{% extends "./base.html" %}
+{% block content %}
 {% load static %}
 <head>
         <link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>
     <title>Krishna</title>
     <center>
-    <h1>Krishna</h1>
+
     <style>
+        .table-custom{
+            color : black;
+        }
         body{
-            background-color : blue;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.pixabay.com/photo/2021/08/18/12/04/12-04-39-785_960_720.jpg');
-            background-repeat : no-repeat;
+            background-color : #E4EEFA;background-repeat : no-repeat;
             background-attachment : fixed;
             background-size :cover;
             background-position : center;
@@ -36,11 +39,13 @@
 
 
 	<div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 table-custom">
+            <h1>Krishna</h1>
             <h2 class="text-center">Today's update</h2>
             <h4 class="text-center"><em>Total: {{krishna|length}}</em></h4>
             <h5>Data maybe delayed sometimes</h5>
-            <table class="table table-bordered table-striped table-hover" id="table">
+            <h5>*Check with the hospital before heading to the hospital</h5>
+            <table class="table table-bordered table-striped table-hover table-custom" id="table">
                 <thead class="thead-dark">
                     <tr>
 
@@ -76,3 +81,4 @@
 </div>
     </center>
     </head>
+{% endblock %}

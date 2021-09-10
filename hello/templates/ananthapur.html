@@ -6,9 +6,12 @@
         <!--<link rel="shortcut icon" type="image/png" href="{% static 'logo.jpeg' %}"/>-->
     <title>Anantapur</title>
     <center>
-    <h1>Anantapur</h1>
+
 
     <style>
+    .table-custom{
+            color : black;
+        }
         body{
             background-color : blue;
             background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../static/kid.jpeg');
@@ -39,11 +42,13 @@
 
 
 	<div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 table-custom table-custom" >
+            <h1>Anantapur</h1>
             <h2 class="text-center">Today's update</h2>
             <h4 class="text-center"><em>Total: {{ananthapur|length}}</em></h4>
             <h5>Data maybe delayed sometimes</h5>
-            <table class="table table-bordered table-striped table-hover" id="table">
+            <h5>*Check with the hospital before heading to the hospital</h5>
+            <table class="table table-bordered table-striped table-hover table-custom" id="table">
                 <thead class="thead-dark">
                     <tr>
 

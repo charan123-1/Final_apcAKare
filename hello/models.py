@@ -9,7 +9,7 @@ from django.contrib import admin
 # # Create your models here.
 
 
-class contactus(models.Model):
+class contact(models.Model):
      name = models.CharField(default='', max_length=60)
      email = models.EmailField(default='')
      message = models.TextField(default='',max_length=5000)

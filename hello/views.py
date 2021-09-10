@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
+
 from django.contrib import messages
 from django.shortcuts import render , redirect
-from .models import Guntur,EG,WG,Krishna,Prakasam,Ananthapur,Kurnool,Visakha,Vizianagaram,Srikakulam,Kadapa,Chittoor,Nellore,contactus
+from .models import Guntur,EG,WG,Krishna,Prakasam,Ananthapur,Kurnool,Visakha,Vizianagaram,Srikakulam,Kadapa,Chittoor,Nellore,contact
 #from api import excel
 def home(request):
 	return render(request, 'index.html', {})
@@ -102,10 +103,8 @@ def contactus(request):
         name = request.POST["name"]
         email = request.POST["email"]
         message = request.POST["message"]
-
-        contact = contactus(name=name,email=email,message=message)
-        contact.save()
-        messages.success("We have received your query!")
-        return redirect('/')
+        data = contact(name=name,email=email, message=message)
+        data.save()
+        return HttpResponse("<h1>Data saved!</h1>")
     else :
         return render(request,'contactus.html',{})
