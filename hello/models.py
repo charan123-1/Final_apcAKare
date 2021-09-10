@@ -7,6 +7,16 @@ from django.contrib import admin
 # Create your models here.from django.db import models
 #
 # # Create your models here.
+
+
+class contactus(models.Model):
+     name = models.CharField(default='', max_length=60)
+     email = models.EmailField(default='')
+     message = models.TextField(default='',max_length=5000)
+
+     def __str__(self):
+          return self.name
+
 class Guntur(models.Model):
      SNO = models.CharField(default='',max_length=100)
      Hospital = models.CharField(default=0, max_length=200)

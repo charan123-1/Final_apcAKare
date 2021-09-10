@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
-from django.shortcuts import render
-from .models import Guntur,EG,WG,Krishna,Prakasam,Ananthapur,Kurnool,Visakha,Vizianagaram,Srikakulam,Kadapa,Chittoor,Nellore
+from django.contrib import messages
+from django.shortcuts import render , redirect
+from .models import Guntur,EG,WG,Krishna,Prakasam,Ananthapur,Kurnool,Visakha,Vizianagaram,Srikakulam,Kadapa,Chittoor,Nellore,contactus
 #from api import excel
 def home(request):
 	return render(request, 'index.html', {})
@@ -97,4 +98,14 @@ def nellore(request):
         {'nellore': nellore})
 
 def contactus(request):
-    return render(request,'contactus.html',{})
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        message = request.POST["message"]
+
+        contact = contactus(name=name,email=email,message=message)
+        contact.save()
+        messages.success("We have received your query!")
+        return redirect('/')
+    else :
+        return render(request,'contactus.html',{})
